@@ -1,0 +1,102 @@
+.section {
+  &__tools {
+    background-color: $colorBlack;
+  }
+}
+.tools {
+  &__container {
+    margin: 0;
+    max-width: unset;
+    padding: unset;
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    @include md {
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+  }
+
+  &__item {
+    flex: 0 1 50%;
+    @include md {
+      flex: 1 1 100%;
+    }
+    &:first-child {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__content {
+    max-width: 514px;
+    margin-left: 40px;
+    @include md {
+      padding: 30px 20px 0px 20px;
+      max-width: unset;
+      margin-left: 0px;
+    }
+  }
+
+  &__name {
+    line-height: 143%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $secondary;
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+  }
+
+  &__title {
+    font-size: 28px;
+    line-height: 114%;
+    color: $primary;
+    &:not(:last-child) {
+      margin-bottom: 14px;
+    }
+    @include lg {
+      font-size: 22px;
+      line-height: 110%;
+    }
+  }
+
+  &__subtitle {
+    line-height: 143%;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__picture {
+    position: relative;
+  }
+
+  &__image {
+    width: 100%;
+    @include md {
+      height: 300px;
+
+      object-fit: cover;
+    }
+  }
+  &__row {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    @include sm {
+      right: 20px;
+    }
+  }
+
+  &__row-item {
+    display: flex;
+    gap: 7px;
+  }
+}

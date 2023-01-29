@@ -1,0 +1,76 @@
+.section {
+  &__we-do {
+    background: #000000;
+    padding: 120px 0px 100px 0px;
+    @include lg {
+      padding: 80px 0px;
+    }
+    @include md {
+      padding: 50px 0px;
+    }
+    @include sm {
+      padding: 30px 0px;
+    }
+  }
+}
+.we-do {
+  &__items {
+    margin-top: 40px;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+    @include md {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  &__picture {
+    position: relative;
+  }
+
+  &__image {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  &__content {
+    position: absolute;
+    bottom: 0px;
+    padding: 0px 30px 30px 30px;
+    @include sm {
+      padding: 0px 10px 10px 10px;
+    }
+  }
+
+  &__position {
+    line-height: 143%;
+    color: $primary;
+    text-transform: uppercase;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+      @include lg {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__info {
+    line-height: 143%;
+    color: $secondary;
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+    @include lg {
+      line-height: 110%;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+  }
+}

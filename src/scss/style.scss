@@ -1,0 +1,47 @@
+// Global SCSS-files imports
+@import "./mixins";
+@import "./vars";
+@import "./reset";
+@import "./fonts";
+@import "./global";
+
+// Sections or Pages SCSS-files imports
+@import "./header";
+
+@import "./header-main";
+@import "./we-do";
+@import "./global-section";
+@import "./tools";
+@import "./clients";
+@import "./help";
+
+
+@import './footer';
+
+// Libs
+// @import './libs/swiper';
+
+
+html,
+body {
+  position: relative;
+  min-height: 100%;
+  font-family: Poppins;
+  color: $primary;
+  font-size: 14px;
+  line-height: 133%;
+
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.header * {
+  transition: all 0.3s ease;
+}
+.main {
+  flex: 1 1 auto;
+}
